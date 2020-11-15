@@ -18,6 +18,10 @@
         // Conexión con el socket server
         const socket = io('http://localhost:8080');
 
+        //on escuchar,
+        socket.on('current-bands', (data) => {
+            console.log(data);
+        })
         
         /// Para emitir
         // socket.emit('mensaje-to-server', { data });
